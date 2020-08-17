@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class LogIn extends React.Component {
     render() {
       return <div style={{marginTop: '100px'}}> 
@@ -17,10 +16,12 @@ class LogIn extends React.Component {
 <div style={{flexDirection: 'column', marginTop: '30px', paddingLeft: '600px', paddingRight: '600px', display: 'flex', justifyContent: 'center'}}> 
 <input style = {{marginBottom: '10px'}} type="submit" value="Submit" />
 <button> New User Click Here </button> 
+{/* need to figure out how to redirect */}
 </div>
 </div>  
     }
   }
 
-  export default LogIn; 
+  export default LogIn;
+
 
