@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class NewUser extends React.Component {
     render() {
       return <div style={{marginTop: '100px'}}> 
