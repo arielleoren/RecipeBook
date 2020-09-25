@@ -4,3 +4,11 @@
     border-bottom: 1px solid black;
     position: absolute;
     }
+
+.activeBold{
+    font-weight: bold;
+}
+
+.noUnderlineLink{
+    text-decoration: none;
+}
