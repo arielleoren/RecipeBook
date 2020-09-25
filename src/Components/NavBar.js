@@ -1,21 +1,22 @@
 import React from 'react';
 import './NavBar.css'; 
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
     return ( 
-        <div> 
+        <div style={{height: '100px', border: '2px solid black'}}> 
     <ul style={{listStyle: 'none', display: 'flex'}}> 
     <li style={{}}> RecipeBook </li>
     <div style={{marginLeft: '800px', display: 'flex', flexDirection: 'row'}}>  
-    <li style={{fontWeight: 'bold'}}> Home </li> 
+    <li><NavLink to='/home' className="noUnderlineLink" activeClassName="activeBold">Home</NavLink> </li> 
     <li style={{marginLeft: '30px'}}> Recipes </li> 
-    <li style={{marginLeft: '30px'}}> New </li> 
+    <li style={{marginLeft: '30px'}}><NavLink to='/new-recipe' className="noUnderlineLink" activeClassName="activeBold">New Recipe</NavLink> </li> 
+    <li style={{marginLeft: '30px'}}><NavLink to='/childd' className="noUnderlineLink" activeClassName="activeBold">Childd</NavLink> </li> 
     </div> 
     </ul> 
     <div class="line"></div>
     </div> 
-
     )
 }; 
 
-export default NavBar; 
+export default NavBar;
