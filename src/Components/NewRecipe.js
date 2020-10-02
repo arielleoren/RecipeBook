@@ -1,7 +1,7 @@
 import React from 'react';
 // import React, { Component } from 'react';
 // import './App.css';
-// import firebase from './firebase.js'; // <--- add this line
+import firebase from './firebase'; // <--- add this line
 
 class NewRecipe extends React.Component {
   constructor() {
@@ -13,25 +13,36 @@ class NewRecipe extends React.Component {
       directions: '', 
       comments: '',
     }
-    this.handleName = this.handleName.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this); // <-- add this line
   }
 
-  handleName(event) {
-    this.setState({name: event.target.value});  
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // const itemsRef = firebase.database().ref('items');
+    const itemsRef = firebase.database().ref('items');
     const item = {
-      title: this.state.currentItem,
-      user: this.state.username
+      name: this.state.name,
+      ingredients: this.state.ingredients, 
+      url: this.state.url, 
+      directions: this.state.directions, 
+      comments: this.state.comments
     }
-    // itemsRef.push(item);
+    alert("hello")
+    console.log(this.state.name)
+    itemsRef.push(item);
+    console.log("firebase success");
     this.setState({
-      currentItem: '',
-      username: ''
+      name: '',
+      ingredients: '', 
+      url: '', 
+      directions: '', 
+      comments: ''
     });
   }
 
@@ -58,10 +69,10 @@ class NewRecipe extends React.Component {
     ingredients
     <input type="text" name="ingredients" onChange={this.handleChange} value={this.state.ingredients} />
   </label>
-  <label style={{display: 'flex', justifyContent: 'center'}}>
+  {/* <label style={{display: 'flex', justifyContent: 'center'}}>
     url:
     <input type="url" name="url" onChange={this.handleChange} value={this.state.url}/>
-  </label>
+  </label> */}
   <label style={{display: 'flex', justifyContent: 'center'}}>
     directions:
     <input type="text" name="directions" onChange={this.handleChange} value={this.state.directions}/>
@@ -70,8 +81,8 @@ class NewRecipe extends React.Component {
     comments:
     <input type="text" name="comments" onChange={this.handleChange} value={this.state.comments}/>
   </label>
+  <input style = {{marginBottom: '10px'}} type="submit" value="Submit" />
 </form>
-<input style = {{marginBottom: '10px'}} type="submit" value="Submit" />
 </div>
     }
 }
