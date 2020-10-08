@@ -9,7 +9,7 @@ function NavBar() {
     <li style={{}}> RecipeBook </li>
     <div style={{marginLeft: '800px', display: 'flex', flexDirection: 'row'}}>  
     <li><NavLink to='/home' className="noUnderlineLink" activeClassName="activeBold">Home</NavLink> </li> 
-    <li style={{marginLeft: '30px'}}> Recipes </li> 
+    <li style={{marginLeft: '30px'}}><NavLink to='/all-recipes' className="noUnderlineLink" activeClassName="activeBold">All Recipes</NavLink></li> 
     <li style={{marginLeft: '30px'}}><NavLink to='/new-recipe' className="noUnderlineLink" activeClassName="activeBold">New Recipe</NavLink> </li> 
     <li style={{marginLeft: '30px'}}><NavLink to='/childd' className="noUnderlineLink" activeClassName="activeBold">Childd</NavLink> </li> 
     </div> 
