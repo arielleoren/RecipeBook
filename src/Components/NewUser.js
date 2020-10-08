@@ -22,8 +22,8 @@ class NewUser extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const itemsRef = firebase.database().ref('items');
-    const item = {
+    const itemsRef = firebase.database().ref('userInfo');
+    const userInfo = {
       fullName: this.state.fullName, 
       username: this.state.username, 
       email: this.state.email, 
@@ -31,7 +31,7 @@ class NewUser extends React.Component {
     }
     alert("hello there")
     console.log(this.state.fullName)
-    itemsRef.push(item);
+    itemsRef.push(userInfo);
     console.log("firebase success");
     this.setState({
       fullName: '', 
