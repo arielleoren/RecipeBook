@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar';  
-import LogIn from './Components/LogIn'; 
 import NewUser from './Components/NewUser';
-import Login from './Components/LogIn'; 
+import Login from './Components/Login'; 
 import NewRecipe from './Components/NewRecipe';
-import Childd from './Components/Childd.jsx';
+// import Childd from './Components/Childd.jsx';
 import Home from './Components/Home.jsx';
 import AllRecipes from './Components/AllRecipes.jsx'; 
 import RecipeDetails from './Components/RecipeDetails.jsx'; 
@@ -17,10 +16,9 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <Route exact path = "/" component={LogIn}/>
+        <Route exact path = "/login" component={Login}/>
         <Route exact path = "/home" component={Home}/>
         <Route exact path = "/new-user" component={NewUser}/>
-        <Route exact path = "/login" component = {Login} /> 
         <Route exact path = "/new-recipe" component={NewRecipe}/>
         {/* <Route exact path = "/childd" component={Childd}/> */}
         <Route exact path = "/all-recipes" component={AllRecipes}/>

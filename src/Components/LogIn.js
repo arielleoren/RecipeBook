@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 
-class LogIn extends React.Component {
+class Login extends React.Component {
     
     render() {
         return <div style={{ marginTop: '100px' }}>
@@ -23,5 +23,5 @@ class LogIn extends React.Component {
     }
 }
 
-export default LogIn;
+export default Login;
 
