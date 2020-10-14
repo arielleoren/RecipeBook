@@ -18,12 +18,10 @@ class LogIn extends React.Component {
             <div style={{ flexDirection: 'column', marginTop: '30px', paddingLeft: '600px', paddingRight: '600px', display: 'flex', justifyContent: 'center' }}>
                 <input style={{ marginBottom: '10px' }} type="submit" value="Submit" />
                 <button><Link to='/new-user'> New User Click Here </Link> </button>
-
             </div>
         </div>
     }
 }
 
 export default LogIn;
-
 
