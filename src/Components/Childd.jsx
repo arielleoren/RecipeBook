@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-const Childd = ({count}) => {
+// const Childd = ({count}) => {
 
-  return (
-    <div>
-        {count} from Childd
-    </div>
-  );
-}
+//   return (
+//     <div>
+//         {count} from Childd
+//         hello
+//     </div>
+    
+//   )
+// }
 
-export default Childd;
+// export default Childd;
+
+
+// return <RecipeDetails name={this.state} /> 
