@@ -12,7 +12,8 @@ class NewRecipe extends React.Component {
       url: '',
       directions: '', 
       comments: '',
-      username: ''
+      username: '', 
+      id: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this); // <-- add this line
@@ -33,12 +34,16 @@ class NewRecipe extends React.Component {
       url: this.state.url, 
       directions: this.state.directions, 
       comments: this.state.comments, 
+      username: this.state.username, 
+      id: this.state.id
     }
     alert("hello")
     console.log(this.state.name)
     itemsRef.push(item);
+    console.log(this.state.ingredients)
     console.log("firebase success");
-    console.log(this.state.username); 
+    console.log(this.state.username);
+    console.log("id" + this.state.id); 
     this.setState({
       name: '',
       ingredients: '', 
@@ -89,4 +94,4 @@ class NewRecipe extends React.Component {
     }
 }
 
-  export default NewRecipe; 
+  export default NewRecipe;
