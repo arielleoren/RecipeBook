@@ -44,7 +44,6 @@ render() {
         <Route exact path = "/new-user" component={NewUser}/>
         <Route exact path = "/new-recipe" component={NewRecipe}/>
         <Route exact path = "/all-recipes" component={AllRecipes}/>
-        {/* <Route exact path ="/recipe-details/${itemId}" component={RecipeDetails}/> */}
         <Route exact path = "/edit-recipe" component={EditRecipe} />
         <Route exact path ="/recipe-details" component={RecipeDetails}/>
       </Router>
