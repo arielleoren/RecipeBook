@@ -4,23 +4,46 @@ import NavBar from './Components/NavBar';
 import NewUser from './Components/NewUser';
 import Login from './Components/Login'; 
 import NewRecipe from './Components/NewRecipe';
-// import Childd from './Components/Childd.jsx';
 import Home from './Components/Home.jsx';
+// import Childd from './Components/Childd.jsx';
 import AllRecipes from './Components/AllRecipes.jsx'; 
 import RecipeDetails from './Components/RecipeDetails.jsx'; 
 import EditRecipe from './Components/EditRecipe.jsx';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import firebase from './Components/firebase';
 
-function App() {
+class App extends React.Component() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user:{},
+    }
+  }
+
+  componentDidMount(){
+    this.authListener();
+  }
+
+  authListener() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({user}); 
+      } else {
+        this.setState({user: null})
+      }
+    }); 
+  }
+
+render() {
   return (
-    <div className="App">
+    <div>
+      {this.state.user ? (<Home />) : (<Login/>)};
       <Router>
         <NavBar />
         <Route exact path = "/login" component={Login}/>
         <Route exact path = "/home" component={Home}/>
         <Route exact path = "/new-user" component={NewUser}/>
         <Route exact path = "/new-recipe" component={NewRecipe}/>
-        {/* <Route exact path = "/childd" component={Childd}/> */}
         <Route exact path = "/all-recipes" component={AllRecipes}/>
         {/* <Route exact path ="/recipe-details/${itemId}" component={RecipeDetails}/> */}
         <Route exact path = "/edit-recipe" component={EditRecipe} />
@@ -28,6 +51,8 @@ function App() {
       </Router>
     </div>
   );  
+}
+
 }
 
 export default App;
