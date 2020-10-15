@@ -2,6 +2,13 @@ import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: ''
+        }
+    }
     
     render() {
         return <div style={{ marginTop: '100px' }}>
