@@ -5,7 +5,6 @@ import NewUser from './Components/NewUser';
 import Login from './Components/Login'; 
 import NewRecipe from './Components/NewRecipe';
 import Home from './Components/Home.jsx';
-// import Childd from './Components/Childd.jsx';
 import AllRecipes from './Components/AllRecipes.jsx'; 
 import RecipeDetails from './Components/RecipeDetails.jsx'; 
 import EditRecipe from './Components/EditRecipe.jsx';
