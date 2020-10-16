@@ -1,7 +1,7 @@
 import React from 'react';
 // import React, { Component } from 'react';
 // import './App.css';
-import firebase from './firebase'; // <--- add this line
+import firebase from './firebase';
 
 class NewRecipe extends React.Component {
   constructor() {
@@ -16,7 +16,7 @@ class NewRecipe extends React.Component {
       id: ''
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this); // <-- add this line
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
