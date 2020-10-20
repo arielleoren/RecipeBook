@@ -37,7 +37,6 @@ class NewRecipe extends React.Component {
       username: this.state.username, 
       id: this.state.id
     }
-    alert("hello")
     console.log(this.state.name)
     itemsRef.push(item);
     console.log(this.state.ingredients)
@@ -67,6 +66,7 @@ class NewRecipe extends React.Component {
     Recipe name*:
     <input type="text" name="name" onChange={this.handleChange} value={this.state.name} required/>
   </label>
+  {/* next steps: allow the user to add an image to the recipe*/}
   {/* having issues with this
   <label style={{display: 'flex', justifyContent: 'center'}}>
     Image:
@@ -76,10 +76,6 @@ class NewRecipe extends React.Component {
     ingredients
     <input type="text" name="ingredients" onChange={this.handleChange} value={this.state.ingredients} />
   </label>
-  {/* <label style={{display: 'flex', justifyContent: 'center'}}>
-    url:
-    <input type="url" name="url" onChange={this.handleChange} value={this.state.url}/>
-  </label> */}
   <label style={{display: 'flex', justifyContent: 'center'}}>
     directions:
     <input type="text" name="directions" onChange={this.handleChange} value={this.state.directions}/>
@@ -88,7 +84,9 @@ class NewRecipe extends React.Component {
     comments:
     <input type="text" name="comments" onChange={this.handleChange} value={this.state.comments}/>
   </label>
-  <input style = {{marginBottom: '10px'}} type="submit" value="Submit" />
+  <div style={{display: 'flex', justifyContent: 'center'}}> 
+  <input style={{display: 'flex', justifyContent: 'center'}} type="submit" value="Submit" />
+  </div> 
 </form>
 </div>
     }
