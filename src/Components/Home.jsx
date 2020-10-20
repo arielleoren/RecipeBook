@@ -1,3 +1,4 @@
+// next steps: have a home page
 // import React from 'react';
 // import firebase from 'firebase';
 // import NavBar from './NavBar';  
