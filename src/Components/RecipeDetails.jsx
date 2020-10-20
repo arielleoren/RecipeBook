@@ -13,10 +13,6 @@ class RecipeDetails extends React.Component {
         this.consoleLog = this.consoleLog.bind(this);
       }
 
-    // componentDidMount() {
-    //     console.log("product props is", this.props.location.productdetailProps);
-    //   }
-
     
     consoleLog(itemName) {
         const itemRef = firebase.database().ref(`/items/${itemName}`); 
@@ -25,9 +21,9 @@ class RecipeDetails extends React.Component {
 
     render() {
     return (
+        <div style={{display: 'flex', justifyContent: 'center'}}> 
         <div> 
         Recipe details 
-       {/* recipe name: {props.item.name} */}
        <div> 
        <div> 
        recipe name: 
@@ -52,7 +48,6 @@ class RecipeDetails extends React.Component {
         <Link to={{
 
             pathname: "/edit-recipe", 
-            // component: {RecipeDetails}, 
             state: {
                 name: this.props.location.state.name,
                 ingredients: this.props.location.state.ingredients, 
@@ -65,6 +60,7 @@ class RecipeDetails extends React.Component {
     </Link>
      </button>
 
+        </div> 
         </div> 
     
         )
