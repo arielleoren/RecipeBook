@@ -92,11 +92,16 @@ class AllRecipes extends React.Component {
     <section className='display-item'>
         
               <div className="wrapper">
+                <div  style={{display: 'flex', justifyContent: 'center', width: "100%", borderBottom: "1px solid black"}}>
                      <h1> name </h1> 
+                     </div>
+                     <div  style={{display: 'flex', justifyContent: 'center'}}> 
+                     {/* <div style={{width:"100%", borderBottom: "1px solid black"}}> */}
                 <ul style={{listStyleType: "none"}}>
                   {this.state.items.map((item) => {
                     console.log(item)
-                    return ( 
+                    return (
+                      <div style={{width: "100%", borderBottom: "1px solid black"}}>
                       <li key={item.id}>
 
                         <button onClick={() => this.seeAllInfo(item.name)}>
@@ -115,20 +120,19 @@ class AllRecipes extends React.Component {
                            </Link>
                         </button>
 
-
-
                         {/* <RecipeDetails itemName={this.state.name} /> */}
-                              
                             <p>
                             {/* brought by: {item.username} */}
                           <button onClick={() => this.removeItem(item.id, item.name)}>delete Item</button>
                         </p>
-                        <div style={{width:"100%", height: "47px", borderBottom: "1px solid black"}}> </div> 
                       </li>
+                      </div> 
+                      
                     )
                   })}
                 </ul>
-              </div>
+                </div> 
+                </div> 
           </section>
           )
 }
