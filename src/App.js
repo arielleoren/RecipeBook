@@ -48,6 +48,7 @@ render() {
     <div> 
         <Router>
         <NavBar /> 
+        {/* next steps have a login page that shows up if a user isn't signed in */}
         {/* {!(this.state.user) && <Redirect to="/login" />} */}
         {
                   // <Router> 
