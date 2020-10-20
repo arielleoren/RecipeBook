@@ -20,9 +20,11 @@ class NavBar extends React.Component {
     <ul style={{listStyle: 'none', display: 'flex'}}> 
     <li style={{}}> RecipeBook </li>
     <div style={{marginLeft: '800px', display: 'flex', flexDirection: 'row'}}>
+    {/* next steps: I want to make a home page which shows the name of the individual user */}
     {/* <li> <NavLink to='/home' className="noUnderlineLink" activeClassName="activeBold">Home</NavLink> </li>  */}
     <li style={{marginLeft: '30px'}}><NavLink to='/all-recipes' className="noUnderlineLink" activeClassName="activeBold">All Recipes</NavLink></li> 
     <li style={{marginLeft: '30px'}}><NavLink to='/new-recipe' className="noUnderlineLink" activeClassName="activeBold">New Recipe</NavLink> </li>
+    {/* next steps: I want to have a logout function*/}
     {/* <li style={{marginLeft: '30px'}} onClick={this.logout}><NavLink to ='/login'> Logout </NavLink> </li>  */}
     </div> 
     </ul> 
