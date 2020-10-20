@@ -109,7 +109,9 @@ class EditRecipe extends React.Component {
     comments:
     <input type="text" name="comments" onChange={this.handleChange} defaultValue={this.props.location.state.comments} value={this.state.comments}/>
   </label>
+  <div style={{display: 'flex', justifyContent: 'center'}}> 
   <input style = {{marginBottom: '10px'}} type="submit" value="Submit" />
+  </div> 
 </form>
 </div>
     }
